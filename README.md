@@ -13,4 +13,4 @@ Possible improvements..
 * add detailed exceptions
 
 # Usage
- python3 dl_apk.py
+ `python3 dl_apk.py`
