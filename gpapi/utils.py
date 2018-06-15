@@ -8,14 +8,11 @@ def fromDocToDictionary(app):
     return {"docId": app.docid,
             "title": app.title,
             "author": app.creator,
-            "description": app.descriptionHtml,
-            "recentChanges": app.details.appDetails.recentChangesHtml,
             "offer": [{"micros": o.micros,
                        "currencyCode": o.currencyCode,
                        "formattedAmount": o.formattedAmount,
                        "checkoutFlowRequired": o.checkoutFlowRequired,
-                       "offerType": o.offerType,
-                       "saleEnds": o.saleEnds}
+                       "offerType": o.offerType}
                       for o in app.offer],
             "images": [{"imageType": img.imageType,
                         "width": img.dimension.width
@@ -28,11 +25,9 @@ def fromDocToDictionary(app):
                         "supportsFifeUrlOptions": img.supportsFifeUrlOptions}
                        for img in app.image],
             "versionCode": app.details.appDetails.versionCode,
-            "versionString": app.details.appDetails.versionString,
             "installationSize": app.details.appDetails.installationSize,
             "numDownloads": app.details.appDetails.numDownloads,
             "uploadDate": app.details.appDetails.uploadDate,
-            "permission": [p for p in app.details.appDetails.permission],
             "files": [{"fileType": f.fileType,
                        "version": f.versionCode,
                        "size": f.size}
@@ -54,7 +49,6 @@ def fromDocToDictionary(app):
             "category": {"appType": app.relatedLinks.categoryInfo.appType,
                          "appCategory": app.relatedLinks.categoryInfo.appCategory},
             "detailsUrl": app.detailsUrl}
-
 
 def readInt(byteArray, start):
     """Read the byte array, starting from *start* position,
