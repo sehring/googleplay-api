@@ -85,10 +85,3 @@ for app in applist:
                 dl_counter += 1
         except:
             pass
-
-# send email when script is done
-server = smtplib.SMTP("smtp.gmail.com", 587)
-server.starttls()
-server.login(cred.email, cred.password)
-server.sendmail(cred.email, "michael.sehring@rub.de", str(dl_counter) + " Apps successfully fetched")
-server.quit()
