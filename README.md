@@ -1,10 +1,10 @@
 # PlayStoreApkcrawler
 
-This project contains an Play Store crawler. It is based on an unofficial google play API for, see (https://github.com/NoMore201/googleplay-api).
+This project contains an Play Store crawler. It is based on an unofficial google play API, see (https://github.com/NoMore201/googleplay-api).
 
-It crawls every free app in the first 500 position of each Play Store category and downloads it, if it does not exist in the local directory. 
+It crawls every free app in the first 500 position of each Play Store category. Then it pulls it, if it does not exist yet in the local directory.
 
-Possible improvements..
+Possible improvements:
 
 * add database of apk version numbers
 * add comparison with new crawls
